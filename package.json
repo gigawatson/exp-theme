@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "watch": "npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --minify"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.2",
+    "tailwindcss": "^4.1.2"
+  }
+}
