@@ -27,6 +27,7 @@ function exp_theme_setup(): void
     remove_action('wp_print_styles', 'print_emoji_styles');
     remove_action('admin_print_scripts', 'print_emoji_detection_script');
     remove_action('admin_print_styles', 'print_emoji_styles');
+    remove_filter('wp_robots', 'wp_robots_max_image_preview_large');
 
     add_filter('wp_img_tag_add_auto_sizes', '__return_false');
     add_filter('wp_is_application_passwords_available', '__return_false');
