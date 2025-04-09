@@ -31,6 +31,7 @@ function exp_theme_setup(): void
 
     add_filter('wp_img_tag_add_auto_sizes', '__return_false');
     add_filter('wp_is_application_passwords_available', '__return_false');
+    add_filter('get_the_archive_title_prefix', '__return_empty_string');
 
     register_nav_menus([
         'main-menu' => esc_html__('Main Menu'),

@@ -1,12 +1,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header">
-        <h1 class="entry-title"><?php the_title(); ?></h1>
-    </header>
-    <div class="entry-content">
-        <?php the_content(); ?>
-        <?php wp_link_pages(['before' => '<div class="entry-pagination">', 'after' => '</div>']); ?>
-    </div>
-    <footer class="entry-footer text-sm">
-        <p><?= exp_last_updated() ?></p>
-    </footer>
+    <?php if (!is_front_page()) {
+        get_template_part('template-parts/entry', 'header');
+    } ?>
+    <?php get_template_part('template-parts/entry', (is_archive() || is_search() ? 'summary' : 'content')); ?>
+    <?php if (!is_archive() && !is_search() && !is_front_page()) {
+        get_template_part('template-parts/entry', 'footer');
+    } ?>
 </article>

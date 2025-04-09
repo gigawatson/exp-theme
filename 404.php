@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="not-found">
     <header class="entry-header">
         <h1 class="entry-title">Not Found</h1>
     </header>
