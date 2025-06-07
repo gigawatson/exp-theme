@@ -6,7 +6,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(['bg-stone-50']); ?>>
 <?php wp_body_open(); ?>
 <header>
     <?php wp_nav_menu([

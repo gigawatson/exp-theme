@@ -4,21 +4,6 @@
  */
 
 /**
- * Add Tailwind base classes to body.
- *
- * @param  string[]  $classes
- *
- * @return string[]
- */
-add_filter('body_class', 'exp_body_class');
-function exp_body_class(array $classes): array
-{
-    $classes[] = 'bg-stone-50';
-
-    return $classes;
-}
-
-/**
  * Add custom editor stylesheet to TinyMCE.
  *
  * @param  string  $mce_css
