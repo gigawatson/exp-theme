@@ -12,7 +12,9 @@
     <?php wp_nav_menu([
         'theme_location' => 'main-menu',
         'container' => 'nav',
-        'menu_class' => 'flex gap-x-4',
+        'container_class' => 'w-full',
+        'menu_class' => 'flex justify-center gap-x-4',
+        'add_li_class' => '',
     ]); ?>
     <div id="search">
         <?php get_search_form(); ?>

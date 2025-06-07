@@ -34,7 +34,7 @@ function exp_add_custom_editor_style(string $mce_css): string
 /**
  * Customize display post states in admin list.
  *
- * @param  array  $states
+ * @param  array    $states
  * @param  WP_Post  $post
  *
  * @return array
@@ -63,4 +63,22 @@ function exp_post_states(array $states, WP_Post $post): array
     }
 
     return $states;
+}
+
+/**
+ * Add additional class to menu li by passing 'add_li_class' to `wp_nav_menu()`.
+ *
+ * @param  array     $classes
+ * @param  WP_Post   $item
+ * @param  stdClass  $args
+ *
+ * @return array
+ */
+add_filter('nav_menu_css_class', 'exp_add_additional_class_on_menu_li', 1, 3);
+function exp_add_additional_class_on_menu_li($classes, $item, $args)
+{
+    if (isset($args->add_li_class)) {
+        $classes[] = $args->add_li_class;
+    }
+    return $classes;
 }
